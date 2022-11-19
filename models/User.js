@@ -65,4 +65,4 @@ User.init(
 }
 );
 
-module.esports = User;
+module.exports = User;
