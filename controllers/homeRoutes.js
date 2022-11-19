@@ -72,20 +72,20 @@ router.get('/signup', (req, res) => {
             }
         ]
     })
-    .then(dbPostData => {
-        if (!dbPostData) {
-            res.status(404).json({ message: 'Could not find post with this ID'})
-            return;
-        }
+        .then(dbPostData => {
+            if (!dbPostData) {
+                res.status(404).json({ message: 'Could not find post with this ID' })
+                return;
+            }
 
-        const post = dbPostData.get({ plain: true });
+            const post = dbPostData.get({ plain: true });
 
-        res.render('single-post', { post, loggedIn: req.session.loggedIn})
-    })
-    .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-    });
+            res.render('single-post', { post, loggedIn: req.session.loggedIn })
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
 });
 
 module.exports = router;
