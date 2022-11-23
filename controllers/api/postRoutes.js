@@ -3,6 +3,7 @@ const router = require("express").Router();
 const { Post } = require("../../models");
 const withAuth = require("../../utils/auth");
 
+// POST route
 router.post("/", withAuth, async (req, res) => {
     try {
         const newPost = await Post.create({
@@ -10,7 +11,7 @@ router.post("/", withAuth, async (req, res) => {
             content: req.body.content,
             user_id: req.session.user_id,
         });
-        console.log("New blog post: ",  newPost);
+        console.log("New blog post: ", newPost);
 
         res.json(newPost);
     } catch (err) {
@@ -19,3 +20,25 @@ router.post("/", withAuth, async (req, res) => {
     }
 });
 
+//UPDATE POST route
+router.put("/:id", withAuth, async (req, res) => {
+    try {
+        const updatePost = await Post.update(req.body, {
+            where: {
+                id: req.params.id,
+            },
+        });
+
+        if (updatePost) {
+            res.status(200).json(updatePost);
+        } else {
+            res.status(404).json({ message: "Could not find post with this ID." });
+        }
+    } catch (err) {
+        res.status(500).json(err);
+    }
+}
+)
+
+//DELETE POST
+    //TO BE COMPLETED
