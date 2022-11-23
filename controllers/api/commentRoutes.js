@@ -11,17 +11,16 @@ router.get('/', (req, res) => {
         });
 });
 
-router.post('/', withAuth, (req, res) => {
-    if (req.session) {
-        Comment.create({
-            comment_text: req.body.comment_text,
-            post_id: req.body.post_id,
-            user_id: req.session.user_id,
-        })
-            .then(dbCommentData => res.json(dbCommentData))
-            .catch(err => {
-                res.status(400).json(err);
-            })
+router.post('/', withAuth, async (req, res) => {
+    try {
+const newComment = await Comment.create({
+    commentContent: req.body.commentContent,
+    post_id: req.body.post_id,
+    user_is: req.session.user_id,
+})
+res.json(newComment);
+    } catch (err) {
+        res.status(500).json(err);
     }
 });
 
