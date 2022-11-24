@@ -10,7 +10,7 @@ Comment.init(
             allowNull: false,
             autoIncrement: true
         },
-        post_content: {
+        commentContent: {
             type: DataTypes.STRING,
             allowNull: false,
         },
