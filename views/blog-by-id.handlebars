@@ -1,11 +1,11 @@
-<article class="goal">
+<article class="post">
     <div class="container">
-        <div class="card-header dashboard-goal">
-            <h4 class="card-title goal-title">{{goal.title}}</h4>
-            <div class="card-body goal-body">
-                <p class="card-body goal-content">{{goal.content}}</p>
-                <p class="card-text goal-author">Posted by <span class="goal-username">{{goal.user.username}}</span> on
-                    {{format_date goal.createdAt}}</p>
+        <div class="card-header dashboard-post">
+            <h4 class="card-title post-title">{{post.title}}</h4>
+            <div class="card-body post-body">
+                <p class="card-body post-content">{{post.content}}</p>
+                <p class="card-text post-author">Posted by <span class="post-username">{{post.user.username}}</span> on
+                    {{format_date post.createdAt}}</p>
             </div>
         </div>
     </div>
@@ -24,9 +24,9 @@
 <div class="container">
     <div class="comments">
         <h4 class="comment-list">Comments</h4>
-        {{#each goal.comments}}
-        <div class="card goal comment-box">
-            <div class="card-body goal-body">
+        {{#each post.comments}}
+        <div class="card post comment-box">
+            <div class="card-body post-body">
                 <div class="card-text comment-text">
                     {{comment_content}}
                 </div>
