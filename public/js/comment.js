@@ -1,7 +1,7 @@
 const commentFormHandler = async (event) => {
     event.preventDefault();
 
-    const comment_content = document.querySelector("#comment").ariaValueMax.trim();
+    const comment_content = document.querySelector("#comment").value.trim();
     const post_id = window.location.toString().split("/")[
         window.location.toString().length - 1
     ];
