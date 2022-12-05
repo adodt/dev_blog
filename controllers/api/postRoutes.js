@@ -42,3 +42,5 @@ router.put("/:id", withAuth, async (req, res) => {
 
 //DELETE POST
     //TO BE COMPLETED
+
+    module.exports = router;

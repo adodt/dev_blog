@@ -3,14 +3,21 @@ const router = require('express').Router();
 const withAuth = require("../utils/auth");
 
 // collect posts for homepage
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
     try {
-        const postData = await.findAll({
-            include: [User],
-        });
+        const postData = await Post.findAll({
+            include: [
+                {
+                  model: User,
+                  attributes: ['username'],
+                },
+              ]
+            });
 
         const posts = postData.map((post) => post.get({ plain: true }));
-        res.render("homepage", { posts, loggedIn: req.session.loggedIn });
+        res.render("homepage", { 
+            posts, 
+            loggedIn: req.session.loggedIn });
     } catch (err) {
         res.status(500).json(err);
     }
