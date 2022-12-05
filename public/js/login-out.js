@@ -68,4 +68,4 @@ document
     .addEventListener("submit", signupFormHandler);
 
 document
-.querySelector("#logout").addEventListener("click", logout);
+    .querySelector("#logout").addEventListener("click", logout);
