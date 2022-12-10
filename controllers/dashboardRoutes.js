@@ -25,7 +25,7 @@ router.get('/', withAuth, async (req, res) => {
         });
 
 
-        const posts = dbPostData.map((post) => post.get({ plain: true }))
+        const posts = PostData.map((post) => post.get({ plain: true }))
         res.render('dashbaord', { posts, loggedIn: req.session.loggedIn });
     } catch (err) {
         res.redirect("/");
