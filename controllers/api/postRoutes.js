@@ -4,16 +4,17 @@ const { Post } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 // POST route
-router.post("/", withAuth, async (req, res) => {
+router.post("/", async (req, res) => {
     try {
-        const newPost = await Post.create({
-            title: req.body.title,
-            content: req.body.content,
-            user_id: req.session.user_id,
-        });
-        console.log("New blog post: ", newPost);
+        console.log(req.body)
+        // const newPost = await Post.create({
+        //     title: req.body.title,
+        //     post_content: req.body.content,
+        //     user_id: req.session.user_id,
+        // });
+        // console.log("New blog post: ", newPost);
 
-        res.json(newPost);
+        // res.json(newPost);
     } catch (err) {
         console.log("Failure to post.", err);
         res.status(500).json(err);

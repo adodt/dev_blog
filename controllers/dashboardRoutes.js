@@ -25,8 +25,8 @@ router.get('/', withAuth, async (req, res) => {
         });
 
 
-        const posts = PostData.map((post) => post.get({ plain: true }))
-        res.render('dashbaord', { posts, loggedIn: req.session.loggedIn });
+        const posts = postData.map((post) => post.get({ plain: true }))
+        res.render('dashboard', { posts, loggedIn: req.session.loggedIn });
     } catch (err) {
         res.redirect("/");
     };
@@ -34,10 +34,10 @@ router.get('/', withAuth, async (req, res) => {
 
 // new post route
 router.get('/new', (req, res) => {
-    res.render("newPost")
+    res.render("new-blog")
 });
 
-router.get("/edit:id", withAuth, async (req, res) => {
+router.get("/edit/:id", withAuth, async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id);
 

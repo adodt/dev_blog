@@ -3,9 +3,6 @@ const seedUser = require("./userData");
 const seedComments = require("./commentData");
 const seedPost = require("./postData");
 
-const seedUser = require("./userData");
-const seedComments = require("./commentData");
-const seedPost = require("./postData");
 
 const seedAll = async () => {
     await sequelize.sync({force: true});
