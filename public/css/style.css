@@ -8,19 +8,43 @@
     padding: 10px;
   }
 
+  h2, h4 {
+    font-family: 'Major Mono Display', monospace;
+  }
+
+  
   link {
     color: black;
+    text-decoration: none;
   }
+
+  p {
+    font-family: 'Karla', sans-serif;
+  }
+
+  .btn {
+    color: black;
+  }
+
   .blogTitle {
     justify-content: center;
     text-align: center;
   }
+
   .form-label {
     font-family: 'Karla', sans-serif;
   }
 
   .navbar {
-    background-color: rgb(241, 244, 244);
+    background-color: #f1f4f8;
     margin-bottom: 2vh;
   }
+
+  .post-title {
+    color: black;
+  }
+
+
+ 
+
 
