@@ -1,6 +1,6 @@
 :root {
    font-family: 'Karla', sans-serif;
-    ;
+    color: black;
   }
 
   h1 {
@@ -10,12 +10,14 @@
 
   h2, h4 {
     font-family: 'Major Mono Display', monospace;
+    margin: 1rem;
   }
 
   
   link {
     color: black;
     text-decoration: none;
+    margin: 1rem;
   }
 
   p {
@@ -24,7 +26,19 @@
 
   .btn {
     color: black;
+    margin: 1rem;
   }
+
+  .btn:hover {
+    color: white;
+    background-color: black;
+    transition: 0.4s;
+}
+
+.btn-submit {
+  color: white;
+  text-decoration: none;
+}
 
   .blogTitle {
     justify-content: center;

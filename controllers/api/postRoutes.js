@@ -42,7 +42,6 @@ router.put("/:id", withAuth, async (req, res) => {
 )
 
 //DELETE POST
-    //Delete posts
 router.delete('/:id', withAuth, async (req, res) => {
     try{
         const deletePost = Post.destroy({

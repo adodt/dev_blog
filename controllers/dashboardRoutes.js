@@ -1,6 +1,7 @@
 const router = require('express').Router();
-const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
+const { Post, User, Comment } = require('../models/');
+
 
 // collect all posts
 router.get('/', withAuth, async (req, res) => {
@@ -43,7 +44,7 @@ router.get("/edit/:id", withAuth, async (req, res) => {
 
         if (postData) {
             const post = postData.get({ plain: true });
-            res.render("editPost", { post });
+            res.render("edit-blog", { post });
         } else {
             res.status(404).end();
         }
@@ -52,5 +53,20 @@ router.get("/edit/:id", withAuth, async (req, res) => {
     }
 });
 
+//edit post route
+router.get('/edit/:id', withAuth, async (req, res) => {
+    try {
+        const postData = await Post.findByPk(req.params.id);
+
+        if (postData) {
+            const post = postData.get({ plain: true });
+            res.render('edit-blog', { post, loggedIn: req.session.loggedIn });
+        } else {
+            res.status(400).end()
+        }
+    } catch (err) {
+        res.redirect('login')
+    }
+});
 
 module.exports = router;
