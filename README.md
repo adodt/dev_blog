@@ -1,4 +1,4 @@
-# TECH-LINK NEWS BLOG
+# DEV BLOG
 ![Express](https://img.shields.io/badge/-Express-blue.svg)
 ![Passport-Local](https://img.shields.io/badge/Passport-Local-green.svg)
 ![Bcrypt](https://img.shields.io/badge/-Bcrypt-darkblue.svg)
@@ -11,7 +11,7 @@
 ![badge](https://img.shields.io/github/languages/top/yogibruce/tech-link)
 
 ## Description
- Tech-Link is a CMS style tech-blog site hosted on Heroku. It allows users to post interesting ideas and share their favorite tech news. 
+The Dev Blog is a CMS style tech-blog site hosted on Heroku. It allows users to post interesting ideas and share their favorite tech news with others. 
 
  ## Table of Contents
 - [Installation](#installation)
@@ -26,7 +26,7 @@
 #
 ## Installation
 <a id="installation"></a>
-No installation is needed to view deployed app. If user would like to use locally, GitHub repo may be cloned. If so, user will need to follow these steps to seed data and open app on localhost:3001:
+If user would like to use locally, GitHub repo may be cloned. See link below to clone. If so, user will need to follow these steps to seed data and open app on localhost:3001:
 #
 1. In your CLI, enter npm install.
 2. Enter "mysql -u root -p" and then enter your mysql password.
@@ -39,45 +39,26 @@ No installation is needed to view deployed app. If user would like to use locall
 <a id="heroku"></a>
 
 #
-Heroku link: [Tech-Link](https://infinite-journey-25034.herokuapp.com/)
+Heroku link: [Tech-Link]
 
 #
 ## GitHub Repository
 <a id="github-repo"></a>
-You may clone this repo to begin using application: [GitHub Repo](https://github.com/YogiBruce/tech-link)
+You may clone this repo to begin using application: [GitHub Repo](https://github.com/adodt/dev_blog)
 
 #
 ## Usage
 <a id="usage"></a>
-User may view public posts when arriving on landing page. By clicking on Login, User is taken to Login page. If User has not previously created a profile, they may Sign Up as a new User. Once logged in, User will view their Dashboard displaying Posts by User. By clicking on Home, User is taken to full page of Posts. User may Comment on a Post by clicking on title and entering Comment into form. From User Dashboard, User may Create a Post by clicking Add Post. If User would like to Update or Delete a previous Post, they may do so by clicking on title of Post and then submitting an Update or selecting Delete Post. If User is done using app, they may Logout which ends Session and returns User to Homepage.
+User can sign up using username and password. Once a sign up is created, user can entry via log in. The user can create a new blog by going to the Dashboard page and clicking "new post". Once a post is created, user can go to the homepage to view all blog posts. User can update or delete an exisiting blog. 
 
 #
 ## Screenshots
 <a id="screenshot"></a>
 
 #### Homepage
-<img src="public\images\homepage.jpg" width="400px">
+<img src="assets/dev_blog_screenshot.png" width="400px">
 <br>
 
-#### Login 
-<img src="public\images\login.jpg" width="400px">
-<br>
-
-#### Dashboard
-<img src="public\images\dashboard.jpg" width="400px">
-<br>
-
-#### Add Post
-<img src="public\images\new-post.jpg" width="400px">
-<br>
-
-#### View and Comment on Other Posts
-<img src="public\images\post-by-id-comment.jpg" width="400px">
-<br>
-
-#### Update or Delete User Post
-<img src="public\images\update-delete-user-post.jpg" width="400px">
-<br>
 
 
 
@@ -91,7 +72,7 @@ There are no tests for this application, all input data is validated for models.
 <a id="license"></a>
 
 #### MIT License [vist link](https://choosealicense.com/licenses/mit/)
-Copyright 2022 - Robert B Arnold Jr
+Copyright 2022 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -103,8 +84,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ## Questions
 <a id="questions"></a>
 
-For any questions regarding this application or any other project by YogiBruce:
+For any questions regarding this application or any other project by Alli Dodt:
 
-### Email: [Gmail](mailto:da.bruce.jr@gmail.com)
+### Email: [Gmail](mailto:allidodt@gmail.com)
 
-### Gihub Profile: [YogiBruce](https://github.com/YogiBruce) 
+### Gihub Profile: [Alli Dodt](https://github.com/adodt) 

@@ -50,7 +50,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
 if (postData) {
     const post = postData.get({ plain: true });
     console.log(post);
-    res.render("post-b-id", {post, loggedIn: req.ession.loggedIn});
+    res.render("post-by-id", {post, loggedIn: req.session.loggedIn});
 } else {
     res.status(404).end();
 }
@@ -59,9 +59,14 @@ if (postData) {
 }
 });
 
-router.get('/login', (req, res) => {
+router.get("/login", (req, res) => {
+    if (req.session.loggedIn) {
+      res.redirect("/profile");
+      return;
+    }
+  
     res.render("login");
-});
+  });
 
 router.get('/',  (req, res) => {res.render('homepage', {})});
   
