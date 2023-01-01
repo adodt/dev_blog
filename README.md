@@ -39,7 +39,7 @@ If user would like to use locally, GitHub repo may be cloned. See link below to 
 <a id="heroku"></a>
 
 #
-Heroku link: [Tech-Link]
+Heroku link: [Tech-Link] https://dev-blog.herokuapp.com/
 
 #
 ## GitHub Repository
